@@ -1,2 +1,32 @@
 
 @import './tags'
+
+html
+	min-height: 100%
+	margin: 0px
+	padding: 0px
+	height: 100%
+
+body
+	margin: 0px
+	padding: 0px
+	font: var( --font-text )
+	display: grid
+	grid-template-rows: auto 1fr auto
+	min-height: 100%
+	color: var( --color-text )
+	min-width: 576px
+	::selection
+		background: var( --color-mark )
+		box-shadow: none
+		outline: 0px solid transparent
+	:focus
+		background: transparent
+		box-shadow: none
+		outline: 0px solid transparent
+
+	::-internal-autofill-selected:hover,
+	::-internal-autofill-selected:focus,
+	::-internal-autofill-selected:active
+		background-color: var( --color-background ) !important
+		color: var( --color-text )
