@@ -1,0 +1,116 @@
+
+input, textarea
+	height: 100%
+	flex-grow: 1
+	font: var( --font-text )
+	border: 1px solid var( --color-placeholder )
+	padding: 0px 1em
+	box-sizing: border-box
+	color: var( --font-text )
+	appearance: none
+	-moz-appearance: textfield
+	-webkit-appearance: none
+	-ms-appearance: none
+	-o-appearance: none
+	margin: 0px
+	&:focus
+		appearance: none !important
+
+	&::-webkit-input-placeholder
+		color: var( --color-placeholder )
+	&::-moz-input-placeholder
+		color: var( --color-placeholder )
+	&::-ms-input-placeholder
+		color: var( --color-placeholder )
+	&::input-placeholder
+		color: var( --color-placeholder )
+	&:-webkit-input-placeholder
+		color: var( --color-placeholder )
+	&:-moz-input-placeholder
+		color: var( --color-placeholder )
+	&:-ms-input-placeholder
+		color: var( --color-placeholder )
+	&:input-placeholder
+		color: var( --color-placeholder )
+
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0px
+ 	&::-webkit-clear-button
+		display: none
+		-webkit-appearance: none
+ 	&::-webkit-datetime-edit-fields-wrapper,
+	&::-webkit-datetime-edit-fields-wrapper
+		visibility: hidden
+
+ 	&:disabled
+		background-color: var( --color-disabled )
+		border-color: var( --color-disabled )
+
+ 	&::read-only
+		background-color: var( --color-mark )
+		border-color: var( --color-disabled )
+
+ 	&::not( :placeholder-shown )
+		&:invalid
+			border-color: var( --color-invalid )
+			color: var( --color-invalid )
+
+ 	&:focus:invalid
+		border-color: var( --color-warning )
+		color: var( --color-warning )
+ 	&[required]
+		&:focus:placeholder-shown
+			border-color: var( --color-link ) !important
+		:not( :focus )
+			&:placeholder-shown:invalid
+				border-color: var( --color-placeholder ) !important
+				color: var( --color-background ) !important
+ 	&[type=file]
+		visibility: hidden
+		position: fixed
+		bottom: 1000%
+		right: 1000%
+		width: 1px
+		height: 1px
+		padding: 0px
+		margin: 0px
+ 	&[type=checkbox]
+		cursor: pointer
+		padding: 0px
+		width: 1rem
+		height: 1rem
+		box-sizing: border-box
+		&:checked
+			background: linear-gradient( var( --color-mark ), var( --color-mark ) )
+			background-size: 1.5em 1.5em
+			background-repeat: no-repeat
+			background-position: center
+	&[type=radio]
+		cursor: pointer
+		&:checked
+			background: radial-gradient( var( --color-disabled ), white, var( --color-mark ) )
+			background-size: 1.5em 1.5em
+			background-repeat: no-repeat
+			background-position: left center
+ 	&[type="number"]
+		-moz-appearance: textfield
+
+textarea
+	padding: 1rem
+
+[contenteditable]
+	font: var( --font-text )
+	display: inline-block
+	&[data-placeholder]:empty:before
+		content: attr( data-placeholder )
+		color: var( --color-extra )
+	&:hover:not(:focus):after
+		content: '\2710\02D9\02D9\02D9'
+		font-size: 1.3em
+		display: inline-flex
+		line-height: 0%
+		color: var( --color-extra )
+		transform: translate( .5rem ) rotate( 180deg )

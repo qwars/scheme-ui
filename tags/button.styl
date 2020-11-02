@@ -1,0 +1,78 @@
+
+button
+	background: var( --color-disabled )
+	border: 1px solid transparent
+	color: var( --color-extra )
+	padding: 0px 1rem
+	transition: opacity .3s
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: nowrap
+	grid-gap: 1ex
+	box-sizing: border-box
+
+	& > abbr > :first-child:not(:last-child)
+		display: none
+
+	&.active
+		background: var( --color-info )
+		color: var( --color-background )
+		cursor: pointer
+		&:hover
+			opacity: .75
+		&:active, &:focus, &.waiting
+			background: var( --color-background )
+			color: var( --color-info )
+			border-color: var( --color-info )
+
+	&.info
+		cursor: pointer
+		&:hover
+			border-color: var( --color-info )
+		&:active, &:focus
+			border-color: var( --color-info )
+			background: var( --color-background )
+		&.waiting
+			border-color: var( --color-info )
+
+	&.warning
+		cursor: default
+		background: var( --color-warning )
+		color: var( --color-background )
+		&:hover
+			opacity: .75
+		&:active, &:focus
+			color: var( --color-warning )
+			border-color: var( --color-warning )
+			background: var( --color-background )
+		&.waiting
+			border-color: var( --color-warning )
+			background: var(--color-background )
+			color: var( --color-warning )
+
+	&.error
+		cursor: default
+		background: var( --color-error )
+		color: var( --color-background )
+		&:hover
+			opacity: .75
+		&:active, &:focus
+			color: var( --color-error )
+			border-color: var( --color-error )
+			background: var( --color-background )
+			color: var( --color-error )
+		&.waiting
+			border-color: var( --color-error )
+			background: var(--color-background)
+			color: var( --color-error )
+
+
+	&.waiting
+		cursor: default
+		& > abbr > :first-child:not(:last-child)
+			display: inline-block
+			animation: spin 3s linear infinite
+
+		& > abbr > :last-child:not(:first-child)
+			display: none

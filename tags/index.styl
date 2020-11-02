@@ -1,3 +1,129 @@
+@import './label.styl'
+@import './input.styl'
+@import './fieldset.styl'
+@import './button.styl'
+
+.info
+	color: var(--color-info)
+
+.warning
+	color: var(--color-warning)
+
+.error
+	color: var(--color-error)
 
 a
 	color: var( --color-link )
+	text-decoration: none
+	&:hover
+		color: var( --color-hover )
+	&:active
+		color: var(--color-visited)
+	&.active
+		color: var( --color-active )
+
+dfn
+	font: var( --font-extra )
+	color: var( --color-extra )
+
+var
+	font: var( --font-extra )
+
+em
+	display: flex
+	grid-gap: 1ex
+	color: var( --color-extra )
+	& > aside
+		flex-grow: 1
+		display: flex
+		justify-content: flex-end
+		flex-wrap: nowrap
+		grid-gap: 1rem
+		padding: 0px 1rem
+
+dl
+	display: grid
+	grid-template-columns: auto 1fr
+	grid-gap: 1em
+	margin: 0px
+	padding: 0px
+	dt, dd
+		margin: 0px
+		padding: 0px
+	dt
+		text-align: right
+		& + dt
+			display: none
+	dd + dd
+		display: none
+
+// blockquote
+// 	background-position: center center
+// 	background-repeat:no-repeat
+// 	background-image: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><line x1='0%' x2='0%' y1='0%' y2='100%' stroke='currentColor'></line><line x1='100%' x2='100%' y1='0%' y2='100%' stroke='currentColor'></line><line x1='0%' x2='1%' y1='0%' y2='0%' stroke='currentColor'></line><line x1='99%' x2='100%' y1='0%' y2='0%' stroke='currentColor'></line><line x1='0%' x2='1%' y1='100%' y2='100%' stroke='currentColor'></line><line x1='99%' x2='100%' y1='100%' y2='100%' stroke='currentColor'></line></svg>");
+
+
+h1
+	font: var( --font-title )
+	font-size: 1.3em
+	font-weight: bolder
+	margin: 0px
+	color: var( --color-title )
+	dfn
+		display: block
+		color: var( --color-extra )
+
+h2
+	font: var( --font-title )
+	font-size: 1.17em
+	font-weight: bolder
+	margin: 0px
+	color: var( --color-title )
+	dfn
+		display: block
+		color: var( --color-extra )
+
+h3
+	font: var( --font-title )
+	font-size: 1.04em
+	font-weight: bolder
+	margin: 0px
+	color: var( --color-title )
+	dfn
+		display: block
+		color: var( --color-extra )
+
+h4
+	font: var( --font-title )
+	font-size: 0.91em
+	font-weight: bolder
+	margin: 0px
+	color: var( --color-title )
+	dfn
+		display: block
+		color: var( --color-extra )
+
+hr
+	border: 0px solid transparent
+	height: 1px
+	background: var( --color-mark )
+	display: flex
+	align-items: center
+	overflow: visible
+	padding: 0px 1rem
+	margin: 1em 0px
+	& > abbr
+		margin: 0 1rem
+		border: 1px solid var( --color-mark )
+		border-radius: 1rem
+		width: 1.2rem
+	& > legend
+		background: var( --color-background )
+		color: var( --color-focus )
+		font-weight: bold
+		font-size: 1.04em
+		padding: 0px 1rem
+
+iframe
+	border: 1px solid var( --color-mark )
+
