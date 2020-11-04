@@ -22,6 +22,38 @@ a
 	&.active
 		color: var( --color-active )
 
+del
+	text-decoration: none
+	color: var( --color-extra )
+	cursor: pointer
+	&:hover
+		color: var( --color-error )
+	&:active
+		color: var(--color-warning )
+	&.active
+		color: var( --color-warning )
+
+ruby
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	grid-gap: 1rem
+	font-size: 2rem
+	rt
+		font: var( --font-extra )
+		color: var( --color-extra )
+
+kbd
+	color: var( --color-extra )
+	cursor: pointer
+	&:hover
+		color: var( --color-hover )
+	&:active
+		color: var(--color-visited )
+	&.active
+		color: var( --color-active )
+
 dfn
 	font: var( --font-extra )
 	color: var( --color-extra )
