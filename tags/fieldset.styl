@@ -9,7 +9,8 @@ fieldset
 		align-items: center
 		justify-content: center
 		flex-wrap: nowrap
-		padding: 0px 1em
+		& > :first-child
+			padding: 0px 1em
 
 		& > aside
 			position: absolute
@@ -17,6 +18,18 @@ fieldset
 			top: 0px
 			background: var( --color-background )
 			padding: 0px 1em
+
+		& > sub
+			position: absolute
+			right: 1em
+			bottom: -.1em
+			display: flex
+			height: 2px
+			align-items: center
+			background: var( --color-background )
+			padding: 0px 1em
+			padding-bottom: 2px
+			white-space: nowrap
 
 		& > nav
 			display: flex
